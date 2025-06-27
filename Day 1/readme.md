@@ -28,4 +28,6 @@ Q3. Why is Docker better than running software directly on your OS?
 
 1. Screenshot or output of `docker images` and `docker ps -a`
 -> ![docker images](images/1.png)
+   ![docker ps -a](images/2.png)
+
 
