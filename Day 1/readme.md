@@ -26,9 +26,6 @@ Q3. Why is Docker better than running software directly on your OS?
 --------------------------------------------------------------------------------------------------------
 **Deliverables:**
 
-1. `Dockerfile` that prints your name using Python
-->  
+1. Screenshot or output of `docker images` and `docker ps -a`
+-> ![docker images](images/1.png)
 
-
-2. Screenshot or output of `docker images` and `docker ps -a`
-->
