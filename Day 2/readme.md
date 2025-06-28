@@ -24,7 +24,8 @@ Today I focused on core Dockerfile instructions, volume usage for data persisten
 FROM python:3.10-slim
 WORKDIR /app
 COPY app.py .
-CMD ["python", "app.py"]
+CMD ["python", "app.py"]```
+
 </details>
 
 <details>
