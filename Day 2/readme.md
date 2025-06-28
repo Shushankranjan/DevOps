@@ -46,3 +46,12 @@ docker run -v $(pwd)/data:/logs alpine sh -c "echo 'log entry' >> /logs/log.txt"
 docker run -d -p 8080:80 nginx
 # Visit http://localhost:8080
 </details>
+```
+</details>
+
+---
+## 🧪 Modification Challenges
+
+- 🔄 Rewrote the Python app to take CLI input instead of an env variable using `ENTRYPOINT`.
+- 🧱 Created a second container that shares a volume and verified file-level access.
+- 🌐 Launched two containers in a custom bridge network and successfully pinged by container name.
