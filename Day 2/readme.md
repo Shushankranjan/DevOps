@@ -25,14 +25,23 @@ FROM python:3.10-slim
 WORKDIR /app
 COPY app.py .
 CMD ["python", "app.py"]
-</details> <details> <summary>👨‍💻 Python App (app.py)</summary>
+</details>
+
+<details>
+<summary>👨‍💻 Python App (app.py)</summary>
 import os
 name = os.getenv("NAME", "DevOps")
 print(f"Hello, {name} from Docker!")
-</details> <details> <summary>📦 Volume Mount Example (Log Write)</summary>
+</details>
+
+<details>
+<summary>📦 Volume Mount Example (Log Write)</summary>
 
 docker run -v $(pwd)/data:/logs alpine sh -c "echo 'log entry' >> /logs/log.txt"
- </details> <details> <summary>🌐 Expose Port & Access Nginx</summary>
+ </details>
+
+<details>
+<summary>🌐 Expose Port & Access Nginx</summary>
 docker run -d -p 8080:80 nginx
 # Visit http://localhost:8080
 </details>
