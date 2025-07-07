@@ -1,0 +1,22 @@
+[0;32m=== System Health Report ===[0m
+
+Date : Sun Jul  6 11:25:00 PM IST 2025
+System: Linux archlinux 6.12.31-1-lts #1 SMP PREEMPT_DYNAMIC Thu, 29 May 2025 09:39:59 +0000 x86_64 GNU/Linux
+
+=== CPU and Memory Usage ===
+Memory Usage
+               total        used        free      shared  buff/cache   available
+Mem:            14Gi       4.9Gi       6.6Gi       166Mi       3.9Gi        10Gi
+Swap:          975Mi       768Ki       975Mi
+uptime:  23:25:00 up 16:27,  1 user,  load average: 0.71, 0.79, 0.73
+
+=== Disk Usage ===
+[0;31m⚠️ /var/lib/snapd/snap/bare/5 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/core18/2887 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/core20/2582 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/core20/2599 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/gnome-3-28-1804/198 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/gtk-common-themes/1535 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/notion-desktop/3 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/snapd/24505 usage at 100%[0m
+[0;31m⚠️ /var/lib/snapd/snap/snapd/24718 usage at 100%[0m
