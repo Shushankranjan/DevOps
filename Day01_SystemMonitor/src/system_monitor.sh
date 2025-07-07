@@ -10,7 +10,8 @@ GREEN="\033[0;32m"
 YELLOW="\033[1;33m"
 RESET="\033[0m"
 
-LOG_DIR="$(dirname "$0")/logs"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+LOG_DIR="$SCRIPT_DIR/../logs"
 mkdir -p "$LOG_DIR"
 
 TIMESTAMP=$(date +%Y.%m.%d_%H%M%S)
