@@ -10,8 +10,11 @@ GREEN="\033[0;32m"
 YELLOW="\033[1;33m"
 RESET="\033[0m"
 
-LOG_DIR='${HOME}/Documents/25DaysDevOps/logs'
-LOG_FILE="${LOG_DIR}/system_health_report_$(date +%Y%m%d_%H%M%S).log"
+LOG_DIR="$(dirname "$0")/logs"
+mkdir -p "$LOG_DIR"
+
+TIMESTAMP=$(date +%Y.%m.%d_%H%M%S)
+LOG_FILE="${LOG_DIR}/system_health_${TIMESTAMP}.log"
 
 {
 echo -e "${GREEN}=== System Health Report ===${RESET}"
@@ -33,7 +36,7 @@ NR > 1 {
   if (usage > 80)
     printf "%s⚠️ %s usage at %d%%%s\n",RED, $6, usage, RESET
 }'
-} | tee "$LOG_FILE" 
+} >> "$LOG_FILE"
 
 echo ""
 
@@ -44,3 +47,5 @@ echo ""
 echo "=== Network Connections ==="
 netstat -tuln | head -10
 
+#Keep only the last 5 logs
+find "$LOG_DIR" -type f -name "system_health_*.log" | sort -r | tail -n +6 | xargs -r rm -f
