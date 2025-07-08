@@ -1,66 +1,88 @@
-````markdown
-# Day 01 – System Monitoring Script
+# 📅 Day 01 – System Monitoring Script
 
-## 📄 Description
-
-A simple Bash-based system monitoring script that:
-- Logs system health info: CPU, memory, disk, top processes, and network connections
-- Stores logs in a timestamped format inside a `logs/` folder
-- Automatically deletes older logs, keeping only the latest 5 for cleanup
-
-This is part of the `25DaysDevOps` practical learning series.
+A lightweight Bash-based system monitoring utility — part of the **25DaysDevOps** hands-on challenge.
 
 ---
 
-## ⚙️ Installation
+## 📝 Overview
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/25DaysDevOps.git
-   cd 25DaysDevOps/Day01_SystemMonitor
-````
+This script captures real-time system health metrics and logs them for audit or debugging purposes. Key features:
 
-2. Make the script executable:
+- ✅ Logs **CPU**, **memory**, **disk usage**, **top 5 processes**, and **active network connections**
+- 🕒 Saves logs with **timestamped filenames** in a structured `logs/` directory
+- ♻️ Keeps the last **5 log files** — older ones are **auto-cleaned** to save space
 
-   ```bash
-   chmod +x system_monitor.sh
-   ```
+---
 
-3. (Optional) Create the `logs/` directory if not already present:
+## 📦 Folder Structure
 
-   ```bash
-   mkdir logs
-   ```
+```
+Day01_SystemMonitor/
+├── logs/                   # Auto-generated logs
+│   └── system_health_*.log
+├── src/
+│   └── system_monitor.sh   # Main monitoring script
+├── config/                 # (Reserved for future config files)
+├── docs/                   # Documentation assets (optional)
+├── tests/                  # Test scripts or validation tools
+└── readme.md               # Task-specific README
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/25DaysDevOps.git
+cd 25DaysDevOps/Day01_SystemMonitor
+```
+
+### 2. Make the Script Executable
+```bash
+chmod +x src/system_monitor.sh
+```
+
+### 3. Create `logs/` Folder (If Not Present)
+```bash
+mkdir logs
+```
 
 ---
 
 ## 🚀 Usage
 
-To run the script and generate a new log:
-
+Run the monitoring script:
 ```bash
-./system_monitor.sh
+./src/system_monitor.sh
 ```
 
-* Log files will be created inside `logs/` with a timestamp.
-* Only the last 5 logs are kept — older ones are automatically deleted.
+**What happens:**
+- A log file is created inside `logs/` with the current timestamp
+- Older logs beyond the last 5 are automatically deleted
 
-Example log file:
-
+📂 Example output file:
 ```
-logs/system_health_20250707_163010.log
+logs/system_health_2025.07.07_163010.log
 ```
 
 ---
 
-## 📁 Folder Structure
+## 💡 Notes
 
-```
-Day01_SystemMonitor/
-├── logs/
-│   └── system_health_*.log
-├── system_monitor.sh
-└── readme.md
-```
+- Run this as a cron job or scheduled task for continuous monitoring
+- Compatible with most Linux distributions (tested on Ubuntu 22.04)
+- Script is modular and ready for further improvements (e.g., email alerts, thresholds)
 
+---
 
+## 🛠️ Future Enhancements (Ideas)
+- Email/SMS alerts for high CPU/RAM usage
+- Slack webhook integration
+- Export to CSV or JSON
+- Add config support (thresholds, log retention count)
+
+---
+
+## 📚 Part of:
+[`25DaysDevOps`](https://github.com/your-username/25DaysDevOps) – A practical, project-first DevOps learning challenge.
