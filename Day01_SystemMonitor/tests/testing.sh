@@ -1,4 +1,5 @@
 #!/bin/bash
-echo "# Test suite for Branch A"
-echo "echo 'Branch A testing'"
+echo "# Testing suite for Branch B"
+echo "echo 'Branch B Testing'"
+
 
