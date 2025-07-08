@@ -1,4 +1,4 @@
 #!/bin/bash
+echo "# Test suite for Branch A"
+echo "echo 'Branch A testing'"
 
-# This script is used to test branch conflicts in a Git repository
-echo "This is a testing to watch branch conflicts"
